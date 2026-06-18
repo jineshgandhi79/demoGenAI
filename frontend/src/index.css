@@ -401,3 +401,19 @@ tr:hover td {
     padding: 20px 16px;
   }
 }
+
+.test-cred-card {
+  transition: all var(--transition-normal);
+}
+
+.test-cred-card:hover {
+  background: hsla(224, 71%, 10%, 0.8) !important;
+  border-color: var(--border-focus) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.test-cred-card:active {
+  transform: translateY(0);
+}
+
