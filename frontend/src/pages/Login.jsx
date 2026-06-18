@@ -152,6 +152,80 @@ const Login = () => {
             {loading ? <div className="spinner" /> : 'Sign In'}
           </button>
         </form>
+
+        <div style={{
+          marginTop: '28px',
+          paddingTop: '20px',
+          borderTop: '1px dashed var(--border-color)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '12px'
+        }}>
+          <p style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '6px', margin: 0 }}>
+            🔑 Here are credentials to test this application:
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            {/* Admin Credentials */}
+            <div 
+              onClick={() => {
+                setEmail('test_admin@support.com');
+                setPassword('admin_password_123');
+              }}
+              style={{
+                background: 'hsla(224, 71%, 4%, 0.4)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-sm)',
+                padding: '10px 14px',
+                cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4px'
+              }}
+              className="test-cred-card"
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--primary)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  Admin Account
+                </span>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Click to autofill</span>
+              </div>
+              <div style={{ fontFamily: 'monospace', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                Email: test_admin@support.com<br />
+                Password: admin_password_123
+              </div>
+            </div>
+
+            {/* User Credentials */}
+            <div 
+              onClick={() => {
+                setEmail('test_user@support.com');
+                setPassword('user_password_123');
+              }}
+              style={{
+                background: 'hsla(224, 71%, 4%, 0.4)',
+                border: '1px solid var(--border-color)',
+                borderRadius: 'var(--radius-sm)',
+                padding: '10px 14px',
+                cursor: 'pointer',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '4px'
+              }}
+              className="test-cred-card"
+            >
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span style={{ fontSize: '11px', fontWeight: 700, color: 'var(--success)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  User Account
+                </span>
+                <span style={{ fontSize: '10px', color: 'var(--text-muted)' }}>Click to autofill</span>
+              </div>
+              <div style={{ fontFamily: 'monospace', fontSize: '12px', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
+                Email: test_user@support.com<br />
+                Password: user_password_123
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
